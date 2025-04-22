@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "9b3196bc-88fe-4b21-8041-c34be2aa9e53",
+		"name": "week 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44027334",
+		"_collection_link": "https://agi-2741340.postman.co/workspace/AGI's-Workspace~aebb22e7-dedd-48fd-8af3-1e309d1f061c/collection/44027334-9b3196bc-88fe-4b21-8041-c34be2aa9e53?action=share&source=collection_link&creator=44027334"
+	},
+	"item": [
+		{
+			"name": "RIDE HAILING API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "Collection for testing ride management endpoints",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pickupLocation\": \"Ayer Keroh\",\r\n  \"destination\": \"UTeM\",\r\n  \"driverId\": \"DRIVER999\",\r\n  \"status\": \"requested\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rides",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rides",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"in-progress\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rides/67fd2bf6c160d9c21035ad45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides",
+						"67fd2bf6c160d9c21035ad45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rides/67fd2bf6c160d9c21035ad45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides",
+						"67fd2bf6c160d9c21035ad45"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
